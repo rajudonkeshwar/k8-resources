@@ -4,4 +4,4 @@ metadata:
   name: myconfig
 data:
   course: "kubernetes"
-  duration: "26hrs"
+  duration: "28hrs"
