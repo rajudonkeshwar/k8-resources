@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx
+  name: serv-nginx
 spec:
   selector: # labels are used as selectors
     project: expense
