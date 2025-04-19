@@ -51,3 +51,9 @@ spec:
       resources:
         requests:
           storage: 1Gi
+
+
+
+  #apt update
+  #apt install bindutils -y
+  #apt install dnsutils -y
