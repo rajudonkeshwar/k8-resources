@@ -36,7 +36,7 @@ spec:
   serviceAccount: expense-mysql-secret
   initContainers:
   - name: awscli
-    image: amazon/aws-cli
+    image: amazon/aws-cli:latest
     command:  ['sh', '-c', 'aws secretsmanager get-secret-value --secret-id eks/expense --query SecretString --output text > /secrets/.env ']
     volumeMounts:
     - mountPath: /secrets
