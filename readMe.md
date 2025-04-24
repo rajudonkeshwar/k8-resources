@@ -19,8 +19,8 @@ create policy manually by going to the aws account and create policy to get the 
 eksctl create iamserviceaccount \
 --cluster=expense \
 --namespace=expense \
---name=expense-mysql-secret \
---attach-policy-arn=arn:aws:iam::445567090602:policy/eks-secretmanager \
+--name=expense-mysql-secret02 \
+--attach-policy-arn=arn:aws:iam::445567090602:policy/expenseMysqlSecretRead \
 --override-existing-serviceaccounts \
 --region us-east-1 \
 --approve
@@ -28,5 +28,5 @@ eksctl create iamserviceaccount \
 this command will create IAM role with policy ExpenseMySQLSecretRead and integrate with EKS SA
 
 then run below command then you will get service account details:
-kubectl get sa <sa-name> -n expense -o yaml
+ skubectl geta <sa-name> -n expense -o yaml
 
