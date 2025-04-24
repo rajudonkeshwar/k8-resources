@@ -20,7 +20,7 @@ eksctl create iamserviceaccount \
 --cluster=expense \
 --namespace=expense \
 --name=expense-mysql-secret \
---attach-policy-arn=arn:aws:iam::315069654700:policy/ExpenseMySQLSecretRead \
+--attach-policy-arn=arn:aws:iam::445567090602:policy/eks-secretmanager \
 --override-existing-serviceaccounts \
 --region us-east-1 \
 --approve
