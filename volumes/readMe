@@ -1,0 +1,24 @@
+
+For creating of static, dynamic EBS follow below steps
+1. install drivers
+2. give permissions to worker nodes
+3. create volume
+4. create PV, PVC and cliam through pod
+5. EC2 and EBS should be in same az incase of EBS provisioning
+6. To install ebs drivers for pv and pvs use below command
+    kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.40"
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+For creation of static, dynamic EFS follow below steps
+
+1. install drivers
+kubectl apply -k \
+    "github.com/kubernetes-sigs/aws-efs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-2.1"
+2. give permissions
+3. create EFS
+4. open port no 2049 on EFS to allow traffic from EC2 worker nodes
+5. create PV, PVC and POD
