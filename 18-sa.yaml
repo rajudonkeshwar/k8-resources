@@ -37,7 +37,7 @@ spec:
   initContainers:
   - name: awscli
     image: amazon/aws-cli
-    command:  ['sh', '-c', 'aws secretsmanager get-secret-value --secret-id expense/mysql/creds --query SecretString --output text > /secrets/.env ']
+    command:  ['sh', '-c', 'aws secretsmanager get-secret-value --secret-id eks/expense --query SecretString --output text > /secrets/.env ']
     volumeMounts:
     - mountPath: /secrets
       name: secret-volume
