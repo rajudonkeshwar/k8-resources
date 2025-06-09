@@ -8,9 +8,19 @@ eksctl utils associate-iam-oidc-provider \
     --approve
 
 
+
+
+
+
 # ----------
 
 create policy manually by going to the aws account and create policy to get the read access for secret manager
+
+
+
+
+
+
 
 # ----------
 
@@ -28,5 +38,14 @@ eksctl create iamserviceaccount \
 this command will create IAM role with policy ExpenseMySQLSecretRead and integrate with EKS SA
 
 then run below command then you will get service account details:
- skubectl geta <sa-name> -n expense -o yaml
+ skubectl get <sa-name> -n expense -o yaml
 
+kubectl logs <pod-name> -c <init-container-name>
+
+
+
+
+
+  #apt update
+  #apt install bindutils -y
+  #apt install dnsutils -y

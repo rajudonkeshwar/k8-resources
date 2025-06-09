@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: rajudonkeshwar/deploy:1.0
+        image: rajudonkeshwar/app2:1.0.0
         ports:
         - containerPort: 80
 ---
